@@ -17,8 +17,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: t('nav.home'), href: '/', key: 'home' },
     { name: t('nav.about'), href: '/about', key: 'about' },
     { name: t('nav.services'), href: '/services', key: 'services' },
-    { name: t('nav.shivpoojan'), href: '/shivpoojan', key: 'shivpoojan', disabled: true },
-    { name: t('nav.gallery'), href: '/gallery', key: 'gallery', disabled: true },
+    { name: t('nav.shivpoojan'), href: '/shivpoojan', key: 'shivpoojan' },
+    { name: t('nav.gallery'), href: '/gallery', key: 'gallery' },
     { name: t('nav.contact'), href: '/contact', key: 'contact' },
   ];
 
@@ -67,32 +67,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8 ml-8">
               {navigation.map((item) => (
-                item.disabled ? (
-                  <span
-                    key={item.key}
-                    className="text-sm font-medium text-muted-foreground opacity-50 cursor-not-allowed"
-                    title="Coming Soon"
-                  >
-                    {item.name}
-                  </span>
-                ) : (
-                  <Link
-                    key={item.key}
-                    to={item.href}
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
-                      location.pathname === item.href
-                        ? 'text-primary border-b-2 border-primary'
-                        : 'text-muted-foreground'
-                    }`}
-                    onClick={e => {
-                      if (location.pathname === item.href) {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                <Link
+                  key={item.key}
+                  to={item.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    location.pathname === item.href
+                      ? 'text-primary border-b-2 border-primary'
+                      : 'text-muted-foreground'
+                  }`}
+                  onClick={e => {
+                    if (location.pathname === item.href) {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  {item.name}
+                </Link>
               ))}
             </nav>
           </div>
@@ -120,33 +110,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
                 <nav className="flex flex-col gap-4">
                   {navigation.map((item) => (
-                    item.disabled ? (
-                      <span
-                        key={item.key}
-                        className="text-base font-medium text-muted-foreground opacity-50 cursor-not-allowed"
-                        title="Coming Soon"
-                      >
-                        {item.name}
-                      </span>
-                    ) : (
-                      <Link
-                        key={item.key}
-                        to={item.href}
-                        className={`text-base font-medium transition-colors hover:text-primary ${
-                          location.pathname === item.href
-                            ? 'text-primary border-b border-primary'
-                            : 'text-muted-foreground'
-                        }`}
-                        onClick={e => {
-                          setMobileMenuOpen(false);
-                          if (location.pathname === item.href) {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                          }
-                        }}
-                      >
-                        {item.name}
-                      </Link>
-                    )
+                <Link
+                  key={item.key}
+                  to={item.href}
+                  className={`text-base font-medium transition-colors hover:text-primary ${
+                    location.pathname === item.href
+                      ? 'text-primary border-b border-primary'
+                      : 'text-muted-foreground'
+                  }`}
+                  onClick={e => {
+                    setMobileMenuOpen(false);
+                    if (location.pathname === item.href) {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  {item.name}
+                </Link>
                   ))}
                 </nav>
                 <div className="mt-auto flex gap-2 pt-8">
