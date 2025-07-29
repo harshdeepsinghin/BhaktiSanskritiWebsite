@@ -58,7 +58,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="container mx-auto px-4">
+      {/* <section className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="h-full hover:shadow-lg transition-shadow">
@@ -84,7 +84,7 @@ const Services = () => {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="bg-gradient-spiritual text-white py-16">
@@ -95,13 +95,14 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:+91xxxxxxxxxx" 
+              href="tel:+917017075603" 
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Call Us Now
             </a>
             <a 
-              href="https://wa.me/91xxxxxxxxxx" 
+              href="https://wa.me/917017075603" 
+              target="_blank" rel="noopener noreferrer"
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
               WhatsApp Us

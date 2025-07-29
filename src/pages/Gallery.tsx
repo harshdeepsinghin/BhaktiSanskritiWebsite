@@ -11,7 +11,7 @@ const Gallery = () => {
   const photos = [
     {
       id: 1,
-      title: 'Diwali Celebration 2024',
+      title: 'Diwali Celebration 2025',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
       description: 'Community Diwali celebration with traditional lighting ceremony'
     },
@@ -184,8 +184,9 @@ const Gallery = () => {
               Email Photos
             </a>
             <a 
-              href="https://wa.me/91xxxxxxxxxx" 
+              href="https://wa.me/917017075603" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              target="_blank" rel="noopener noreferrer"
             >
               WhatsApp Share
             </a>

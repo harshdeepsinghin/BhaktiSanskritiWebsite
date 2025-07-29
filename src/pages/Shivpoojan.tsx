@@ -105,7 +105,7 @@ const Shivpoojan = () => {
       </section>
 
       {/* Individual Accessories */}
-      <section className="bg-muted py-16">
+      {/* <section className="bg-muted py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-primary mb-12 font-sanskrit">
             Individual Puja Items
@@ -118,18 +118,15 @@ const Shivpoojan = () => {
                   <div className="text-3xl mb-3">{item.image}</div>
                   <h3 className="font-semibold text-sm mb-2">{item.name}</h3>
                   <div className="text-lg font-bold text-secondary mb-3">{item.price}</div>
-                  {/* <Button size="sm" variant="outline" className="w-full text-xs">
-                    Add
-                  </Button> */}
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Shiva Worship */}
-      <section className="container mx-auto px-4">
+      {/* <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -167,7 +164,7 @@ const Shivpoojan = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact for Orders */}
       <section className="bg-gradient-spiritual text-white py-16">
@@ -178,13 +175,14 @@ const Shivpoojan = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://wa.me/91xxxxxxxxxx" 
+              href="https://wa.me/917017075603" 
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              target="_blank" rel="noopener noreferrer"
             >
               WhatsApp Order
             </a>
             <a 
-              href="tel:+91xxxxxxxxxx" 
+              href="tel:+917017075603" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
               Call to Order

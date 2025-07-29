@@ -13,7 +13,7 @@ const Contact = () => {
       title: t('contact.whatsapp'),
       description: 'Quick response on WhatsApp',
       action: 'Send Message',
-      link: 'https://wa.me/91xxxxxxxxxx',
+      link: 'https://wa.me/917017075603',
       color: 'bg-green-50 hover:bg-green-100'
     },
     {
@@ -21,7 +21,7 @@ const Contact = () => {
       title: t('contact.call'),
       description: 'Direct phone consultation',
       action: 'Call Now',
-      link: 'tel:+91xxxxxxxxxx',
+      link: 'tel:+917017075603',
       color: 'bg-blue-50 hover:bg-blue-100'
     },
     {
@@ -58,7 +58,9 @@ const Contact = () => {
           {contactMethods.map((method, index) => (
             <Card key={index} className={`${method.color} border-0 transition-colors`}>
               <CardContent className="p-8 text-center">
-                <div className="mb-6">{method.icon}</div>
+                <div className="flex justify-center mb-6">
+                  {method.icon}
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{method.title}</h3>
                 <p className="text-muted-foreground mb-6">{method.description}</p>
                 <a href={method.link}>
@@ -86,9 +88,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-muted-foreground">
-                    123 Spiritual Avenue<br />
-                    Cultural District<br />
-                    New Delhi - 110001<br />
+                    Clock Tower<br />
+                    Dehradun<br />
+                    Uttarakhand - 248001<br />
                     India
                   </p>
                 </div>
@@ -121,7 +123,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-3">General Inquiries</h3>
                   <div className="space-y-2">
-                    <a href="tel:+91xxxxxxxxxx" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:+917017075603" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                       <Phone className="w-4 h-4 mr-3" />
                       +91 XXXXX XXXXX
                     </a>
@@ -135,7 +137,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-3">Program Coordination</h3>
                   <div className="space-y-2">
-                    <a href="tel:+91xxxxxxxxxx" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:+917017075603" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                       <Phone className="w-4 h-4 mr-3" />
                       +91 XXXXX XXXXX
                     </a>
@@ -148,7 +150,7 @@ const Contact = () => {
 
                 <div>
                   <h3 className="font-semibold mb-3">Emergency Contact</h3>
-                  <a href="https://wa.me/91xxxxxxxxxx" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors">
+                  <a href="https://wa.me/917017075603" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-3" />
                     WhatsApp: +91 XXXXX XXXXX
                   </a>
@@ -159,15 +161,20 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Map Section */}
       <section className="container mx-auto px-4">
         <Card className="overflow-hidden">
           <div className="aspect-video bg-muted flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Location Map</h3>
-              <p className="text-muted-foreground">Interactive map will be available here</p>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.74114435665!2d78.03923607556455!3d30.324295074783848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929ea85275763%3A0xdc5852f79736305f!2sClock%20Tower!5e1!3m2!1sen!2sin!4v1753788488082!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Location Map"
+            ></iframe>
           </div>
         </Card>
       </section>
@@ -181,7 +188,8 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://wa.me/91xxxxxxxxxx" 
+              href="https://wa.me/917017075603" 
+              target="_blank" rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
               <MessageCircle className="w-5 h-5 mr-2" />

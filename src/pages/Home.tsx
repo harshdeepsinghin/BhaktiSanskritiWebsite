@@ -31,7 +31,7 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="container mx-auto px-4">
+      {/* <section className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primary mb-4 font-sanskrit">
             {t('services.title')}
@@ -66,10 +66,10 @@ const Home = () => {
             </CardContent>
           </Card>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Content */}
-      <section className="bg-muted py-16">
+      {/* <section className="bg-muted py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -92,7 +92,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
