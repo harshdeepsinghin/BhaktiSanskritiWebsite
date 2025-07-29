@@ -12,7 +12,7 @@ const Gallery = () => {
     {
       id: 1,
       title: 'Diwali Celebration 2024',
-      image: 'https://images.unsplash.com/photo-1604519316306-c0e5e8d99bf5?w=400',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
       description: 'Community Diwali celebration with traditional lighting ceremony'
     },
     {

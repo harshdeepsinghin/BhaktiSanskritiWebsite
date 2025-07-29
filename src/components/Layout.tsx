@@ -29,9 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-spiritual rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">ॐ</span>
-              </div>
+              <img src="/android-chrome-192x192.png" alt="Logo" className="w-10 h-10 object-cover rounded-full" />
               <div className="hidden md:block">
                 <h1 className="text-xl font-bold text-primary font-sanskrit">
                   {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}
@@ -115,9 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-gradient-spiritual rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">ॐ</span>
-              </div>
+              <img src="/android-chrome-192x192.png" alt="Logo" className="w-8 h-8 object-cover rounded-full" />
               <h3 className="text-lg font-semibold text-primary font-sanskrit">
                 {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}
               </h3>

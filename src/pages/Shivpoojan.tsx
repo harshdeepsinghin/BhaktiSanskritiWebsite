@@ -94,10 +94,10 @@ const Shivpoojan = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full" variant="default">
+                {/* <Button className="w-full" variant="default">
                   <ShoppingCart className="w-4 h-4 mr-2" />
                   Add to Cart
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           ))}
@@ -118,9 +118,9 @@ const Shivpoojan = () => {
                   <div className="text-3xl mb-3">{item.image}</div>
                   <h3 className="font-semibold text-sm mb-2">{item.name}</h3>
                   <div className="text-lg font-bold text-secondary mb-3">{item.price}</div>
-                  <Button size="sm" variant="outline" className="w-full text-xs">
+                  {/* <Button size="sm" variant="outline" className="w-full text-xs">
                     Add
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             ))}
