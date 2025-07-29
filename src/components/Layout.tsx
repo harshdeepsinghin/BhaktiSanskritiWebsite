@@ -27,14 +27,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-card border-b border-border sticky top-0 z-50">
+      <header className="bg-[#1F4D66] border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img src="/android-chrome-192x192.png" alt="Logo" className="w-10 h-10 object-cover rounded-full" />
               <div className="hidden md:block">
-                <h1 className="text-xl font-bold text-primary font-sanskrit">
+                <h1 className="text-xl font-bold font-sanskrit text-[#F4A300]">
                   {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}
                 </h1>
               </div>
@@ -70,9 +70,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link
                   key={item.key}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                  className={`text-sm font-medium transition-colors hover:text-[#F4A300] ${
                     location.pathname === item.href
-                      ? 'text-primary border-b-2 border-primary'
+                      ? 'text-[#F4A300] border-b-2 border-[#F4A300]'
                       : 'text-muted-foreground'
                   }`}
                   onClick={e => {
@@ -94,12 +94,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             onClick={() => setMobileMenuOpen(false)}
           >
             <aside
-              className={`fixed top-0 right-0 h-full w-64 bg-card shadow-lg transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+              className={`fixed top-0 right-0 h-full w-64 bg-[#1F4D66] shadow-lg transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
               onClick={e => e.stopPropagation()}
             >
               <div className="flex flex-col h-full p-6">
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-lg font-bold font-sanskrit text-primary">{language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}</span>
+                  <span className="text-lg font-bold font-sanskrit text-[#F4A300]">{language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}</span>
                   <button
                     className="text-2xl text-muted-foreground hover:text-primary focus:outline-none"
                     onClick={() => setMobileMenuOpen(false)}
@@ -113,9 +113,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link
                   key={item.key}
                   to={item.href}
-                  className={`text-base font-medium transition-colors hover:text-primary ${
+                  className={`text-base font-medium transition-colors hover:text-[#F4A300] ${
                     location.pathname === item.href
-                      ? 'text-primary border-b border-primary'
+                      ? 'text-[#F4A300] border-b border-[#F4A300]'
                       : 'text-muted-foreground'
                   }`}
                   onClick={e => {
@@ -157,12 +157,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border mt-16">
+      <footer className="bg-[#1F4D66] border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <img src="/android-chrome-192x192.png" alt="Logo" className="w-8 h-8 object-cover rounded-full" />
-              <h3 className="text-lg font-semibold text-primary font-sanskrit">
+              <h3 className="text-lg font-semibold font-sanskrit text-[#F4A300]">
                 {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}
               </h3>
             </div>

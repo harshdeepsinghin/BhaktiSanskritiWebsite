@@ -39,9 +39,8 @@
 
     --radius: 0.5rem;
 
-    /* Traditional gradients */
-    --gradient-spiritual: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-divine: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--primary)));
+    /* Shiva Blue as main background */
+    --background: 205 52% 26%; /* Shiva Blue #1F4D66 */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
