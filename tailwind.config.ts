@@ -18,6 +18,14 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sanskrit': ['Noto Sans Devanagari', 'sans-serif'],
+				'serif-sanskrit': ['Noto Serif Devanagari', 'serif'],
+			},
+			backgroundImage: {
+				'gradient-spiritual': 'var(--gradient-spiritual)',
+				'gradient-divine': 'var(--gradient-divine)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
