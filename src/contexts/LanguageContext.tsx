@@ -56,7 +56,7 @@ const translations = {
     'contact.email': 'Email Us',
     
     // Footer
-    'footer.copyright': '© 2024 Bhakti Sanskriti. All rights reserved.',
+    'footer.copyright': '© 2025 Bhakti Sanskriti. All rights reserved.',
   },
   hi: {
     // Navigation
@@ -105,7 +105,7 @@ const translations = {
     'contact.email': 'ईमेल करें',
     
     // Footer
-    'footer.copyright': '© 2024 भक्ति संस्कृति। सभी अधिकार सुरक्षित।',
+    'footer.copyright': '© 2025 भक्ति संस्कृति। सभी अधिकार सुरक्षित।',
   }
 };
 
