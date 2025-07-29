@@ -50,6 +50,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       ? 'text-primary border-b-2 border-primary'
                       : 'text-muted-foreground'
                   }`}
+                  onClick={e => {
+                    if (location.pathname === item.href) {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
                 >
                   {item.name}
                 </Link>
@@ -89,6 +94,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ? 'text-primary border-b border-primary'
                     : 'text-muted-foreground'
                 }`}
+                onClick={e => {
+                  if (location.pathname === item.href) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
               >
                 {item.name}
               </Link>
