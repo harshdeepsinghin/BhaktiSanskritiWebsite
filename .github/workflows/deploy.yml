@@ -3,7 +3,11 @@ name: Deploy Vite Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # or master if your default branch is master
+      - main
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
