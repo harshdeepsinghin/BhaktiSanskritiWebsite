@@ -44,18 +44,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center space-x-2 ml-auto">
               <Globe className="w-4 h-4 text-muted-foreground" />
               <Button
-                variant={language === 'en' ? 'default' : 'outline'}
+                variant="ghost"
                 size="sm"
                 onClick={() => setLanguage('en')}
-                className="text-xs"
+                className={`text-xs border border-[var(--primary)] text-[#F4A300] shadow-none transition-colors duration-200
+                  ${language === 'en' ? 'bg-[var(--primary)]' : 'bg-transparent'}
+                  hover:bg-[var(--primary)] hover:text-[#F4A300] focus:bg-[var(--primary)] focus:text-[#F4A300]`}
               >
                 EN
               </Button>
               <Button
-                variant={language === 'hi' ? 'default' : 'outline'}
+                variant="ghost"
                 size="sm"
                 onClick={() => setLanguage('hi')}
-                className="text-xs"
+                className={`text-xs border border-[var(--primary)] text-[#F4A300] shadow-none transition-colors duration-200
+                  ${language === 'hi' ? 'bg-[var(--primary)]' : 'bg-transparent'}
+                  hover:bg-[var(--primary)] hover:text-[#F4A300] focus:bg-[var(--primary)] focus:text-[#F4A300]`}
               >
                 हि
               </Button>
