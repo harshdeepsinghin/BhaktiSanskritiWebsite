@@ -55,7 +55,7 @@ const translations = {
     'contact.call': 'Call Us',
     'contact.email': 'Email Us',
     
-    // Footer
+    // Footer 
     'footer.copyright': '© 2025 Bhakti Sanskriti. All rights reserved.',
   },
   hi: {

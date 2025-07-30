@@ -146,7 +146,7 @@ const Gallery = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-50 transition-all">
-                    <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center ">
                       <Play className="w-8 h-8 text-primary ml-1" />
                     </div>
                   </div>
@@ -155,8 +155,9 @@ const Gallery = () => {
                   <h3 className="font-semibold text-lg mb-2">{video.title}</h3>
                   <p className="text-muted-foreground text-sm mb-3">{video.description}</p>
                   <Button 
-                    variant="outline" 
+                    variant="secondary" 
                     size="sm"
+                    className="bg-secondary text-secondary-foreground border-none"
                     onClick={() => window.open(`https://youtube.com/watch?v=${video.youtubeId}`, '_blank')}
                   >
                     <Play className="w-4 h-4 mr-2" />

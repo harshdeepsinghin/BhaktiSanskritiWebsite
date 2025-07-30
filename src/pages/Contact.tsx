@@ -14,7 +14,7 @@ const Contact = () => {
       description: 'Quick response on WhatsApp',
       action: 'Send Message',
       link: 'https://wa.me/917017075603',
-      color: 'bg-green-50 hover:bg-green-100'
+      color: 'bg-muted-foreground'
     },
     {
       icon: <Phone className="w-8 h-8 text-blue-500" />,
@@ -22,7 +22,7 @@ const Contact = () => {
       description: 'Direct phone consultation',
       action: 'Call Now',
       link: 'tel:+917017075603',
-      color: 'bg-blue-50 hover:bg-blue-100'
+      color: 'bg-muted-foreground'
     },
     {
       icon: <Mail className="w-8 h-8 text-purple-500" />,
@@ -30,7 +30,7 @@ const Contact = () => {
       description: 'Detailed inquiries via email',
       action: 'Send Email',
       link: 'mailto:info@bhaktisanskriti.org',
-      color: 'bg-purple-50 hover:bg-purple-100'
+      color: 'bg-muted-foreground'
     }
   ];
 
@@ -62,7 +62,7 @@ const Contact = () => {
                   {method.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{method.title}</h3>
-                <p className="text-muted-foreground mb-6">{method.description}</p>
+                <p className="text-background mb-6">{method.description}</p>
                 <a href={method.link}>
                   <Button variant="default" className="w-full">
                     {method.action}

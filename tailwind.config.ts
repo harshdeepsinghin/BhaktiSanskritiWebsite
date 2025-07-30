@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sanskrit': ['Noto Sans Devanagari', 'sans-serif'],
-				'serif-sanskrit': ['Noto Serif Devanagari', 'serif'],
+				'sanskrit': ['Noto Serif Devanagari', 'Noto Serif'],
+				'serif-sanskrit': ['Noto Serif Devanagari', 'Noto Serif'],
 			},
 			backgroundImage: {
 				'gradient-spiritual': 'var(--gradient-spiritual)',
