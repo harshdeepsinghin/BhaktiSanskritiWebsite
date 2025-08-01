@@ -3,10 +3,9 @@ import type { Config } from "tailwindcss";
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./components/**/*.{ts,tsx}",
+		"./contexts/**/*.{ts,tsx}",
 	],
 	prefix: "",
 	theme: {
@@ -23,8 +22,8 @@ export default {
 				'serif-sanskrit': ['Noto Serif Devanagari', 'Noto Serif'],
 			},
 			backgroundImage: {
-				'gradient-spiritual': 'var(--gradient-spiritual)',
-				'gradient-divine': 'var(--gradient-divine)',
+				'gradient-spiritual': 'linear-gradient(135deg, hsl(205, 52%, 26%), hsl(210, 32%, 34%))',
+				'gradient-divine': 'linear-gradient(180deg, hsl(43, 100%, 44%), hsl(40, 95%, 48%))',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -59,16 +58,6 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
 			borderRadius: {
