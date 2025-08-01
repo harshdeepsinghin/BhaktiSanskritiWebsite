@@ -1,10 +1,10 @@
 {
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/about/page": "app/about/page.js",
-  "/gallery/page": "app/gallery/page.js",
   "/contact/page": "app/contact/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/about/page": "app/about/page.js",
   "/services/page": "app/services/page.js",
-  "/page": "app/page.js",
-  "/shivpoojan/page": "app/shivpoojan/page.js"
+  "/shivpoojan/page": "app/shivpoojan/page.js",
+  "/page": "app/page.js"
 }

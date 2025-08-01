@@ -48,13 +48,13 @@
       "static/chunks/main-app-7f9473bb6a52c84a.js",
       "static/chunks/app/loading-045cc18e7508fb5b.js"
     ],
-    "/about/page": [
+    "/contact/page": [
       "static/chunks/webpack-8130d86d192dcd29.js",
       "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
       "static/chunks/964-3614fe6f8fdab808.js",
       "static/chunks/main-app-7f9473bb6a52c84a.js",
       "static/chunks/277-0951047b752870d4.js",
-      "static/chunks/app/about/page-f92b28de05763f41.js"
+      "static/chunks/app/contact/page-0952c419602fedc8.js"
     ],
     "/gallery/page": [
       "static/chunks/webpack-8130d86d192dcd29.js",
@@ -64,13 +64,13 @@
       "static/chunks/277-0951047b752870d4.js",
       "static/chunks/app/gallery/page-f15c0c18bf529e86.js"
     ],
-    "/contact/page": [
+    "/about/page": [
       "static/chunks/webpack-8130d86d192dcd29.js",
       "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
       "static/chunks/964-3614fe6f8fdab808.js",
       "static/chunks/main-app-7f9473bb6a52c84a.js",
       "static/chunks/277-0951047b752870d4.js",
-      "static/chunks/app/contact/page-0952c419602fedc8.js"
+      "static/chunks/app/about/page-f92b28de05763f41.js"
     ],
     "/services/page": [
       "static/chunks/webpack-8130d86d192dcd29.js",
@@ -78,6 +78,14 @@
       "static/chunks/964-3614fe6f8fdab808.js",
       "static/chunks/main-app-7f9473bb6a52c84a.js",
       "static/chunks/app/services/page-3fbcc8f7e7b9a332.js"
+    ],
+    "/shivpoojan/page": [
+      "static/chunks/webpack-8130d86d192dcd29.js",
+      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
+      "static/chunks/964-3614fe6f8fdab808.js",
+      "static/chunks/main-app-7f9473bb6a52c84a.js",
+      "static/chunks/277-0951047b752870d4.js",
+      "static/chunks/app/shivpoojan/page-cc365e8d221eca9e.js"
     ],
     "/page": [
       "static/chunks/webpack-8130d86d192dcd29.js",
@@ -87,14 +95,6 @@
       "static/chunks/277-0951047b752870d4.js",
       "static/chunks/874-e4f7d5eb734e49f8.js",
       "static/chunks/app/page-399c54757aa18987.js"
-    ],
-    "/shivpoojan/page": [
-      "static/chunks/webpack-8130d86d192dcd29.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-3614fe6f8fdab808.js",
-      "static/chunks/main-app-7f9473bb6a52c84a.js",
-      "static/chunks/277-0951047b752870d4.js",
-      "static/chunks/app/shivpoojan/page-cc365e8d221eca9e.js"
     ]
   }
 }
