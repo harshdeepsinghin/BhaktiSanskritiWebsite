@@ -1,10 +1,10 @@
 {
   "/sitemap.xml/route": "/sitemap.xml",
-  "/contact/page": "/contact",
   "/gallery/page": "/gallery",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
   "/_not-found/page": "/_not-found",
-  "/services/page": "/services",
-  "/shivpoojan/page": "/shivpoojan",
   "/page": "/",
-  "/about/page": "/about"
+  "/services/page": "/services",
+  "/shivpoojan/page": "/shivpoojan"
 }
