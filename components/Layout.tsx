@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Globe, Menu, X, MapPin, Mail, Phone } from 'lucide-react';
+import { Globe, Menu } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -35,12 +35,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
               <img src="/android-chrome-192x192.png" alt="Logo" className="w-10 h-10 object-cover rounded-full" />
-              <div className="hidden md:block">
-                <h1 className="text-xl font-bold text-primary">
+              <div>
+                <h1 className="text-sm md:text-xl font-bold text-primary">
                   <span className={language === 'hi' ? 'font-sanskrit' : 'font-english'}>
                     {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}
                   </span>
                 </h1>
+                <p className={`text-xs opacity-75 ${language === 'hi' ? 'font-sanskrit' : 'font-english'} hidden md:block`}>
+                  {language === 'hi' ? 'देवभूमि भारत संस्थान' : 'Devbhoomi Bharat Sansthan'}
+                </p>
               </div>
             </Link>
 
@@ -180,15 +183,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <h3 className={`text-xl font-bold ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
                     {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}
                   </h3>
-                  <p className="text-sm opacity-80">
-                    {language === 'hi' ? 'पवित्र परंपराओं का संरक्षण' : 'Preserving Sacred Traditions'}
+                  <p className={`text-sm opacity-80 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                    {language === 'hi' ? 'देवभूमि भारत संस्थान' : 'Devbhoomi Bharat Sansthan'}
                   </p>
                 </div>
               </div>
               <p className="text-sm opacity-90 leading-relaxed">
                 {language === 'hi' 
-                  ? 'हिंदू संस्कृति, आध्यात्म और पारंपरिक मूल्यों को बढ़ावा देने के लिए समर्पित।'
-                  : 'Dedicated to promoting Hindu culture, spirituality, and traditional values through various cultural programs and services.'
+                  ? 'हिंदू संस्कृति, आध्यात्म और पारंपरिक मूल्यों को बढ़ावा देने के लिए समर्पित संस्थान।'
+                  : 'An organization dedicated to promoting Hindu culture, spirituality, and traditional values through various cultural programs and services.'
                 }
               </p>
             </div>
@@ -248,9 +251,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <p className="hover:opacity-100 transition-opacity">
-                      {language === 'hi' ? 'भारत' : 'India'}
-                    </p>
+                    <div className="hover:opacity-100 transition-opacity leading-relaxed">
+                      {language === 'hi' ? (
+                        <>
+                          <p className="font-medium">देवभूमि भारत संस्थान</p>
+                          <p>कार्यालय पता - खसरा नंबर 145,</p>
+                          <p>साहकोला पांडे गांव,</p>
+                          <p>भीमताल (नैनीताल)</p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="font-medium">Devbhoomi Bharat Sansthan</p>
+                          <p>Office Address - Khasra No. 145,</p>
+                          <p>Sahkola Pande Village,</p>
+                          <p>Bhimtal (Nainital)</p>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
                 
@@ -259,8 +276,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
-                  <a href="mailto:info@bhaktisanskriti.org" className="hover:opacity-100 transition-opacity hover:underline">
-                    info@bhaktisanskriti.org
+                  <a href="mailto:contact@bhaktisanskriti.org" className="hover:opacity-100 transition-opacity hover:underline">
+                    contact@bhaktisanskriti.org
                   </a>
                 </div>
                 
@@ -268,9 +285,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  <a href="tel:+91-XXXXXXXXXX" className="hover:opacity-100 transition-opacity hover:underline">
-                    +91-XXXX-XXXXXX
-                  </a>
+                  <span className="hover:opacity-100 transition-opacity">
+                    {language === 'hi' ? 'संपर्क के लिए ईमेल करें' : 'Contact via Email'}
+                  </span>
                 </div>
               </div>
 
@@ -310,7 +327,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-sm opacity-80">
                 <p>
-                  © {new Date().getFullYear()} {language === 'hi' ? 'भक्ति संस्कृति' : 'Bhakti Sanskriti'}. 
+                  © 2025 {language === 'hi' ? 'भक्ति संस्कृति - देवभूमि भारत संस्थान' : 'Bhakti Sanskriti - Devbhoomi Bharat Sansthan'}. 
                   {language === 'hi' ? ' सभी अधिकार सुरक्षित।' : ' All rights reserved.'}
                 </p>
               </div>
