@@ -111,7 +111,7 @@ const translations = {
     'shivpoojan.feature2': 'सम्पूर्ण शिव पूजा प्रक्रिया',
     'shivpoojan.feature3': 'सरल और स्पष्ट निर्देश',
     'shivpoojan.feature4': 'मन्त्रयुक्त पूजा विधि',
-    'shivpoojan.feature5': 'पारंपरिक पूजा पद्धति',
+    'shivpoojan.feature5': 'वैदिक एवं शास्त्र सम्मत पद्धति',
     
     // Gallery Page
     'gallery.title': 'गैलरी',

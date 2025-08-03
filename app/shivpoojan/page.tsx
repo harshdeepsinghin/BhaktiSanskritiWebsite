@@ -7,7 +7,7 @@ import { Star } from 'lucide-react';
 
 export default function Shivpoojan() {
   const { t, language } = useLanguage();
-  
+
   // Static product info to avoid hydration issues
   const productInfo = {
     price: '₹411/-',
@@ -52,9 +52,9 @@ export default function Shivpoojan() {
               </p>
               <div className="flex items-center justify-center space-x-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    className="w-5 h-5 text-yellow-400 fill-current" 
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-yellow-400 fill-current"
                   />
                 ))}
                 <span className="text-sm text-muted-foreground ml-2">({productInfo.rating})</span>
@@ -75,13 +75,13 @@ export default function Shivpoojan() {
                     ))}
                   </ul>
                 </div>
-                
-              <div className="text-center mb-6">
-                <p className={`text-lg mb-2 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
-                  {t('shivpoojan.serviceAmount')}
-                </p>
-                <div className="text-4xl font-bold text-secondary">{productInfo.price}</div>
-              </div>
+
+                <div className="text-center mb-6">
+                  <p className={`text-lg mb-2 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                    {t('shivpoojan.serviceAmount')}
+                  </p>
+                  <div className="text-4xl font-bold text-secondary">{productInfo.price}</div>
+                </div>
                 {/* Contact to Order Section */}
                 <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-6 rounded-xl">
                   <div className="text-center">
@@ -91,8 +91,8 @@ export default function Shivpoojan() {
                     <p className={`mb-6 opacity-90 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
                       {t('shivpoojan.orderText')}
                     </p>
-                    <a 
-                      href="mailto:contact@bhaktisanskriti.org" 
+                    <a
+                      href="mailto:contact@bhaktisanskriti.org"
                       className="inline-flex items-center bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
                     >
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -122,21 +122,21 @@ export default function Shivpoojan() {
             </h2>
             <div className={`text-lg leading-relaxed space-y-6 text-muted-foreground ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
               <p>
-                {language === 'hi' 
+                {language === 'hi'
                   ? 'भक्ति वृत्तिका एक संपूर्ण शिव पूजा मार्गदर्शिका है जो वैदिक और शास्त्र सम्मत विधियों पर आधारित है। यह सरल भाषा में लिखी गई है ताकि हर भक्त आसानी से भगवान शिव की पूजा कर सके।'
                   : 'Bhakti Vrittika is a complete Shiva worship guide based on Vedic and scripture-approved methods. It is written in simple language so that every devotee can easily worship Lord Shiva.'
                 }
               </p>
               <p>
-                {language === 'hi' 
+                {language === 'hi'
                   ? 'इसमें मंत्रयुक्त पूजा विधि, पारंपरिक पूजा पद्धति, और सभी आवश्यक निर्देश शामिल हैं। यह देवभूमि भारत संस्थान द्वारा तैयार किया गया है।'
                   : 'It includes mantra-based worship methods, traditional worship systems, and all necessary instructions. This has been prepared by Devbhoomi Bharat Sansthan.'
                 }
               </p>
             </div>
             <div className="mt-12">
-              <a 
-                href="mailto:contact@bhaktisanskriti.org" 
+              <a
+                href="mailto:contact@bhaktisanskriti.org"
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block"
               >
                 {language === 'hi' ? 'अभी आदेश दें' : 'Order Now'}
