@@ -18,9 +18,6 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-sanskrit">
             {t('home.title')}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
-            {t('home.subtitle')}
-          </p>
           <p className="text-lg mb-8 opacity-80 max-w-2xl mx-auto">
             {t('home.description')}
           </p>

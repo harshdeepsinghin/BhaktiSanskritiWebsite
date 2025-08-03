@@ -14,14 +14,13 @@ const translations = {
     'nav.home': 'Home',
     'nav.about': 'About Us',
     'nav.services': 'Our Services',
-    'nav.shivpoojan': 'Shivpoojan Kit',
+    'nav.shivpoojan': 'Products',
     'nav.gallery': 'Gallery',
     'nav.contact': 'Contact Us',
     
     // Home Page
     'home.title': 'Welcome to Bhakti Sanskriti',
-    'home.subtitle': 'Preserving Sacred Traditions, Spreading Divine Knowledge',
-    'home.description': 'Dedicated to promoting Hindu culture, spirituality, and traditional values through various cultural programs and services.',
+    'home.description': 'A research institution dedicated to the preservation of sacred traditions and the dissemination of divine knowledge. Its purpose is to enrich culture, spirituality, and tradition through the harmonious integration of devotion and scripture.',
     'home.explore': 'Explore Our Services',
     
     // About Page
@@ -37,10 +36,22 @@ const translations = {
     'services.education': 'Spiritual Education',
     'services.festivals': 'Festival Celebrations',
     
-    // Shivpoojan Page
-    'shivpoojan.title': 'Shivpoojan Kit',
-    'shivpoojan.subtitle': 'Complete Worship Kit for Lord Shiva',
-    'shivpoojan.description': 'Everything you need for authentic Shiva worship and puja rituals.',
+    // Products Page
+    'shivpoojan.title': 'Our Products',
+    'shivpoojan.subtitle': 'Complete Vedic & Scripture-Approved Shiva Worship Guide',
+    'shivpoojan.description': 'A comprehensive guide for authentic Shiva worship with mantras and traditional methods.',
+    'shivpoojan.productName': 'Bhakti Vrittika',
+    'shivpoojan.fullName': 'Complete Vedic & Scripture-Approved Simple Shiva Worship Method with Mantras',
+    'shivpoojan.serviceAmount': 'Service Amount',
+    'shivpoojan.features': 'Features',
+    'shivpoojan.contactOrder': 'Contact to Order',
+    'shivpoojan.orderText': 'Get this precious guide for only ₹411/-',
+    'shivpoojan.orderNow': 'Order Now',
+    'shivpoojan.feature1': 'Vedic & Scripture-Approved Method',
+    'shivpoojan.feature2': 'Complete Shiva Worship Process',
+    'shivpoojan.feature3': 'Simple and Clear Instructions',
+    'shivpoojan.feature4': 'Mantra-Based Worship Method',
+    'shivpoojan.feature5': 'Traditional Worship System',
     
     // Gallery Page
     'gallery.title': 'Gallery',
@@ -63,14 +74,13 @@ const translations = {
     'nav.home': 'होमपेज',
     'nav.about': 'संस्थान के बारे में',
     'nav.services': 'हमारी सेवाएँ',
-    'nav.shivpoojan': 'शिवपूजन किट',
+    'nav.shivpoojan': 'उत्पाद',
     'nav.gallery': 'गैलरी',
     'nav.contact': 'संपर्क करें',
     
     // Home Page
     'home.title': 'भक्ति संस्कृति में आपका स्वागत है',
-    'home.subtitle': 'पवित्र परंपराओं का संरक्षण, दिव्य ज्ञान का प्रसार',
-    'home.description': 'विभिन्न सांस्कृतिक कार्यक्रमों और सेवाओं के माध्यम से हिंदू संस्कृति, आध्यात्म और पारंपरिक मूल्यों को बढ़ावा देने के लिए समर्पित।',
+    'home.description': 'एक शोध-संस्था जो पवित्र परंपराओं के संरक्षण और दिव्य ज्ञान के प्रसार के लिए समर्पित है। इसका उद्देश्य श्रद्धा और शास्त्र के समन्वय से संस्कृति, आध्यात्म और परंपरा को पुलकित करना है।',
     'home.explore': 'हमारी सेवाएं देखें',
     
     // About Page
@@ -86,10 +96,22 @@ const translations = {
     'services.education': 'आध्यात्मिक शिक्षा',
     'services.festivals': 'त्योहार समारोह',
     
-    // Shivpoojan Page
-    'shivpoojan.title': 'शिवपूजन किट',
-    'shivpoojan.subtitle': 'भगवान शिव की पूर्ण पूजा किट',
-    'shivpoojan.description': 'प्रामाणिक शिव पूजा और पूजा अनुष्ठानों के लिए आपकी आवश्यकता की हर चीज।',
+    // Products Page
+    'shivpoojan.title': 'हमारे उत्पाद',
+    'shivpoojan.subtitle': 'वैदिक व शास्त्र सम्मत सम्पूर्ण शिव पूजा मार्गदर्शिका',
+    'shivpoojan.description': 'मंत्रयुक्त और पारंपरिक विधियों के साथ प्रामाणिक शिव पूजा की संपूर्ण मार्गदर्शिका।',
+    'shivpoojan.productName': 'भक्ति वृत्तिका',
+    'shivpoojan.fullName': 'वैदिक व शास्त्र सम्मत सम्पूर्ण शिव पूजा सरल विधि व मन्त्रयुक्त',
+    'shivpoojan.serviceAmount': 'सेवा राशि',
+    'shivpoojan.features': 'विशेषताएं',
+    'shivpoojan.contactOrder': 'आदेश देने के लिए संपर्क करें',
+    'shivpoojan.orderText': 'केवल ₹411/- में प्राप्त करें यह अनमोल मार्गदर्शिका',
+    'shivpoojan.orderNow': 'अभी ऑर्डर करें',
+    'shivpoojan.feature1': 'वैदिक व शास्त्र सम्मत विधि',
+    'shivpoojan.feature2': 'सम्पूर्ण शिव पूजा प्रक्रिया',
+    'shivpoojan.feature3': 'सरल और स्पष्ट निर्देश',
+    'shivpoojan.feature4': 'मन्त्रयुक्त पूजा विधि',
+    'shivpoojan.feature5': 'पारंपरिक पूजा पद्धति',
     
     // Gallery Page
     'gallery.title': 'गैलरी',

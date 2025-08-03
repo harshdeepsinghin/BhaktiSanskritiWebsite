@@ -2,118 +2,146 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ShoppingCart, Star, Package, Heart } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export default function Shivpoojan() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  // Static product info to avoid hydration issues
+  const productInfo = {
+    price: '₹411/-',
+    image: '🕉️',
+    rating: 5.0
+  };
 
-  const kitItems = [
-    {
-      name: 'Basic Shiva Puja Kit',
-      price: '₹499',
-      image: '🔱',
-      features: ['Shiva Lingam', 'Rudraksha Mala', 'Incense Sticks', 'Diya & Oil', 'Puja Guide'],
-      rating: 4.8
-    },
-    {
-      name: 'Premium Worship Set',
-      price: '₹999',
-      image: '🕉️',
-      features: ['Crystal Shiva Lingam', 'Silver Kalash', 'Premium Incense', 'Meditation Mat', 'Sacred Books'],
-      rating: 4.9
-    },
-    {
-      name: 'Complete Ritual Kit',
-      price: '₹1,499',
-      image: '📿',
-      features: ['Marble Shiva Lingam', 'Copper Vessels', 'Authentic Herbs', 'Yantra Set', 'Audio Mantras'],
-      rating: 5.0
-    },
-    {
-      name: 'Family Puja Package',
-      price: '₹2,999',
-      image: '🏛️',
-      features: ['Large Shiva Murti', 'Complete Vessel Set', 'Family Puja Items', 'Decoration Set', 'Guide Book'],
-      rating: 4.7
-    }
+  const features = [
+    t('shivpoojan.feature1'),
+    t('shivpoojan.feature2'),
+    t('shivpoojan.feature3'),
+    t('shivpoojan.feature4'),
+    t('shivpoojan.feature5')
   ];
 
   return (
     <div className="space-y-16 py-8">
       {/* Header */}
       <section className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-sanskrit">
+        <h1 className={`text-4xl md:text-5xl font-bold text-primary mb-6 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
           {t('shivpoojan.title')}
         </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
+        <p className={`text-xl text-muted-foreground max-w-2xl mx-auto mb-4 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
           {t('shivpoojan.subtitle')}
         </p>
-        <p className="text-muted-foreground">
+        <p className={`text-muted-foreground ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
           {t('shivpoojan.description')}
         </p>
       </section>
 
-      {/* Featured Kits */}
+      {/* Product Information */}
       <section className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-primary mb-12 font-sanskrit">
-          Complete Worship Kits
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {kitItems.map((kit, index) => (
-            <Card key={index} className="h-full hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="text-6xl mb-4">{kit.image}</div>
-                <CardTitle className="text-lg">{kit.name}</CardTitle>
-                <div className="flex items-center justify-center space-x-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className={`w-4 h-4 ${i < Math.floor(kit.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-                    />
-                  ))}
-                  <span className="text-sm text-muted-foreground ml-1">({kit.rating})</span>
+        <div className="max-w-4xl mx-auto">
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader className="text-center pb-6">
+              <div className="text-8xl mb-6">{productInfo.image}</div>
+              <CardTitle className={`text-2xl md:text-3xl mb-4 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                {t('shivpoojan.productName')}
+              </CardTitle>
+              <p className={`text-lg text-muted-foreground mb-4 leading-relaxed ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                {t('shivpoojan.fullName')}
+              </p>
+              <div className="flex items-center justify-center space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className="w-5 h-5 text-yellow-400 fill-current" 
+                  />
+                ))}
+                <span className="text-sm text-muted-foreground ml-2">({productInfo.rating})</span>
+              </div>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="space-y-8">
+                <div>
+                  <h3 className={`text-xl font-semibold mb-6 text-secondary ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                    {t('shivpoojan.features')}
+                  </h3>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {features.map((feature, idx) => (
+                      <li key={idx} className={`text-secondary flex items-start p-3 bg-muted-foreground rounded-lg ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                        <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="text-2xl font-bold text-secondary">{kit.price}</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-6">
-                  {kit.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+                
+              <div className="text-center mb-6">
+                <p className={`text-lg mb-2 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                  {t('shivpoojan.serviceAmount')}
+                </p>
+                <div className="text-4xl font-bold text-secondary">{productInfo.price}</div>
+              </div>
+                {/* Contact to Order Section */}
+                <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-6 rounded-xl">
+                  <div className="text-center">
+                    <h3 className={`text-2xl font-bold mb-4 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                      📞 {t('shivpoojan.contactOrder')}
+                    </h3>
+                    <p className={`mb-6 opacity-90 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+                      {t('shivpoojan.orderText')}
+                    </p>
+                    <a 
+                      href="mailto:contact@bhaktisanskriti.org" 
+                      className="inline-flex items-center bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                      {t('shivpoojan.orderNow')}
+                    </a>
+                    <p className="mt-4 text-sm opacity-80">
+                      contact@bhaktisanskriti.org
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Contact for Orders */}
-      <section className="bg-gradient-spiritual text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Order Your Puja Kit Today</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Contact us to place your order or for custom puja kit requirements
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://wa.me/917017075603" 
-              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              target="_blank" rel="noopener noreferrer"
-            >
-              WhatsApp Order
-            </a>
-            <a 
-              href="tel:+917017075603" 
-              className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              Call to Order
-            </a>
+      {/* About the Product */}
+      <section className="bg-muted py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className={`text-3xl font-bold mb-8 text-primary ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+              {language === 'hi' ? 'भक्ति वृत्तिका के बारे में' : 'About Bhakti Vrittika'}
+            </h2>
+            <div className={`text-lg leading-relaxed space-y-6 text-muted-foreground ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
+              <p>
+                {language === 'hi' 
+                  ? 'भक्ति वृत्तिका एक संपूर्ण शिव पूजा मार्गदर्शिका है जो वैदिक और शास्त्र सम्मत विधियों पर आधारित है। यह सरल भाषा में लिखी गई है ताकि हर भक्त आसानी से भगवान शिव की पूजा कर सके।'
+                  : 'Bhakti Vrittika is a complete Shiva worship guide based on Vedic and scripture-approved methods. It is written in simple language so that every devotee can easily worship Lord Shiva.'
+                }
+              </p>
+              <p>
+                {language === 'hi' 
+                  ? 'इसमें मंत्रयुक्त पूजा विधि, पारंपरिक पूजा पद्धति, और सभी आवश्यक निर्देश शामिल हैं। यह देवभूमि भारत संस्थान द्वारा तैयार किया गया है।'
+                  : 'It includes mantra-based worship methods, traditional worship systems, and all necessary instructions. This has been prepared by Devbhoomi Bharat Sansthan.'
+                }
+              </p>
+            </div>
+            <div className="mt-12">
+              <a 
+                href="mailto:contact@bhaktisanskriti.org" 
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-block"
+              >
+                {language === 'hi' ? 'अभी आदेश दें' : 'Order Now'}
+              </a>
+            </div>
           </div>
         </div>
       </section>
