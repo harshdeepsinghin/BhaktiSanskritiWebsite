@@ -79,7 +79,7 @@ export default function Services() {
                   </CardContent>
                 </Card>
               </div>
-<br /><br /><br />
+              <br /><br /><br />
             </div>
           </div>
         </section>
@@ -156,7 +156,7 @@ export default function Services() {
                   </CardContent>
                 </Card>
               </div>
-<br /><br /><br />
+              <br /><br /><br />
             </div>
           </div>
         </section>
@@ -171,23 +171,28 @@ export default function Services() {
       {/* Call to Action */}
       <section className="bg-gradient-spiritual text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Become part of our spiritual family and participate in our various programs and services
+          <h2 className="text-3xl font-bold mb-6 font-sanskrit">
+            {language === 'hi' ? 'हमारे समुदाय से जुड़ें' : 'Join Our Community'}
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+            {language === 'hi' 
+              ? 'हमारे आध्यात्मिक परिवार का हिस्सा बनें और हमारे विभिन्न कार्यक्रमों और सेवाओं में भाग लें'
+              : 'Become part of our spiritual family and participate in our various programs and services'
+            }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+917017075603"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call Us Now
+              {language === 'hi' ? 'अभी कॉल करें' : 'Call Us Now'}
             </a>
             <a
               href="https://wa.me/917017075603"
               target="_blank" rel="noopener noreferrer"
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
-              WhatsApp Us
+              {language === 'hi' ? 'व्हाट्सऐप करें' : 'WhatsApp Us'}
             </a>
           </div>
         </div>

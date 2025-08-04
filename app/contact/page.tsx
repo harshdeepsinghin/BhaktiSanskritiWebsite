@@ -7,30 +7,48 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Phone, Mail, MessageCircle, MapPin, Clock, Users } from 'lucide-react';
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const contactMethods = [
     {
       icon: <MessageCircle className="w-8 h-8 text-green-500" />,
       title: t('contact.whatsapp'),
-      description: 'Quick response on WhatsApp',
-      action: 'Send Message',
+      description: {
+        hi: 'व्हाट्सऐप पर त्वरित उत्तर',
+        en: 'Quick response on WhatsApp'
+      },
+      action: {
+        hi: 'संदेश भेजें',
+        en: 'Send Message'
+      },
       link: 'https://wa.me/917017075603',
       color: 'bg-muted-foreground'
     },
     {
       icon: <Phone className="w-8 h-8 text-blue-500" />,
       title: t('contact.call'),
-      description: 'Direct phone consultation',
-      action: 'Call Now',
+      description: {
+        hi: 'सीधी फोन परामर्श',
+        en: 'Direct phone consultation'
+      },
+      action: {
+        hi: 'अभी कॉल करें',
+        en: 'Call Now'
+      },
       link: 'tel:+917017075603',
       color: 'bg-muted-foreground'
     },
     {
       icon: <Mail className="w-8 h-8 text-purple-500" />,
       title: t('contact.email'),
-      description: 'Detailed inquiries via email',
-      action: 'Send Email',
+      description: {
+        hi: 'ईमेल के माध्यम से विस्तृत पूछताछ',
+        en: 'Detailed inquiries via email'
+      },
+      action: {
+        hi: 'ईमेल भेजें',
+        en: 'Send Email'
+      },
       link: 'mailto:info@bhaktisanskriti.org',
       color: 'bg-muted-foreground'
     }
@@ -63,11 +81,13 @@ export default function Contact() {
                 <div className="flex justify-center mb-6">
                   {method.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{method.title}</h3>
-                <p className="text-background mb-6">{method.description}</p>
+                <h3 className="text-xl font-semibold mb-2 font-sanskrit">{method.title}</h3>
+                <p className="text-background mb-6" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+                  {method.description[language]}
+                </p>
                 <a href={method.link}>
                   <Button variant="default" className="w-full">
-                    {method.action}
+                    {method.action[language]}
                   </Button>
                 </a>
               </CardContent>
@@ -184,9 +204,14 @@ export default function Contact() {
       {/* Call to Action */}
       <section className="bg-gradient-spiritual text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Our Spiritual Community</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Connect with us today and become part of our growing spiritual family
+          <h2 className="text-3xl font-bold mb-6 font-sanskrit">
+            {language === 'hi' ? 'हमारे आध्यात्मिक समुदाय से जुड़ें' : 'Join Our Spiritual Community'}
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+            {language === 'hi' 
+              ? 'आज ही हमसे जुड़ें और हमारे बढ़ते आध्यात्मिक परिवार का हिस्सा बनें'
+              : 'Connect with us today and become part of our growing spiritual family'
+            }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -195,14 +220,14 @@ export default function Contact() {
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Join WhatsApp Group
+              {language === 'hi' ? 'व्हाट्सऐप ग्रुप में शामिल हों' : 'Join WhatsApp Group'}
             </a>
             <a 
               href="tel:+91xxxxxxxxxx" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Schedule Visit
+              {language === 'hi' ? 'मुलाकात का समय तय करें' : 'Schedule Visit'}
             </a>
           </div>
         </div>
