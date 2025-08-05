@@ -54,11 +54,11 @@ export default function Home() {
       {/* Inspiration Story */}
       <div className="from-primary/10 py-8 md:py-12">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto" style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '1.2rem', padding: '1.5rem', borderLeft: '4px solid #d97706', margin: '2rem auto' }}>
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-sanskrit" style={{ fontFamily: 'Noto Sans Devanagari, serif', lineHeight: 1.8 }}>
+          <div className="max-w-2xl mx-auto" style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '1.2rem', padding: '1.5rem', borderLeft: '4px solid #d97706', margin: '1rem auto' }}>
+            <p className="text-2xl md:text-3xl text-muted-foreground mb-4 font-sanskrit" style={{ fontFamily: 'Noto Sans Devanagari, serif', lineHeight: 1.8 }}>
               "श्रावण मास की वो दिव्य घड़ी जब किसी मन में जगी एक जिज्ञासा..."
             </p>
-            <p className="text-base md:text-lg text-muted-foreground font-sanskrit" style={{ fontFamily: 'Noto Sans Devanagari, serif', lineHeight: 1.8 }}>
+            <p className="text-xl md:text-2xl text-muted-foreground font-sanskrit" style={{ fontFamily: 'Noto Sans Devanagari, serif', lineHeight: 1.8 }}>
               — यही वह क्षण था जिसने भक्ति वृत्तिका को जन्म दिया।
             </p>
           </div>
