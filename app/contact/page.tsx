@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -8,6 +8,11 @@ import { Phone, Mail, MessageCircle, MapPin, Clock, Users } from 'lucide-react';
 
 export default function Contact() {
   const { t, language } = useLanguage();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const contactMethods = [
     {
@@ -82,12 +87,12 @@ export default function Contact() {
                   {method.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 font-sanskrit">{method.title}</h3>
-                <p className="text-background mb-6" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-                  {method.description[language]}
+                <p className="text-background mb-6" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+                  {isClient ? method.description[language] : method.description.en}
                 </p>
                 <a href={method.link}>
                   <Button variant="default" className="w-full">
-                    {method.action[language]}
+                    {isClient ? method.action[language] : method.action.en}
                   </Button>
                 </a>
               </CardContent>
@@ -205,10 +210,10 @@ export default function Contact() {
       <section className="bg-gradient-spiritual text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 font-sanskrit">
-            {language === 'hi' ? 'हमारे आध्यात्मिक समुदाय से जुड़ें' : 'Join Our Spiritual Community'}
+            {isClient && language === 'hi' ? 'हमारे आध्यात्मिक समुदाय से जुड़ें' : 'Join Our Spiritual Community'}
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-            {language === 'hi' 
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+            {isClient && language === 'hi' 
               ? 'आज ही हमसे जुड़ें और हमारे बढ़ते आध्यात्मिक परिवार का हिस्सा बनें'
               : 'Connect with us today and become part of our growing spiritual family'
             }
@@ -220,14 +225,14 @@ export default function Contact() {
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              {language === 'hi' ? 'व्हाट्सऐप ग्रुप में शामिल हों' : 'Join WhatsApp Group'}
+              {isClient && language === 'hi' ? 'व्हाट्सऐप ग्रुप में शामिल हों' : 'Join WhatsApp Group'}
             </a>
             <a 
               href="tel:+91xxxxxxxxxx" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              {language === 'hi' ? 'मुलाकात का समय तय करें' : 'Schedule Visit'}
+              {isClient && language === 'hi' ? 'मुलाकात का समय तय करें' : 'Schedule Visit'}
             </a>
           </div>
         </div>

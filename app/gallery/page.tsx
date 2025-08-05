@@ -1,14 +1,19 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Play, Image as ImageIcon } from 'lucide-react';
 
 export default function Gallery() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [activeTab, setActiveTab] = useState<'photos' | 'videos'>('photos');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const photos = [
     {
@@ -175,23 +180,28 @@ export default function Gallery() {
       {/* Featured Content */}
       <section className="bg-gradient-spiritual text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Share Your Moments</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Have beautiful moments from our events? Share them with our community
+          <h2 className="text-3xl font-bold mb-6 font-sanskrit">
+            {isClient && language === 'hi' ? 'अपने पल साझा करें' : 'Share Your Moments'}
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+            {isClient && language === 'hi' 
+              ? 'हमारे कार्यक्रमों के सुंदर पल हैं? उन्हें हमारे समुदाय के साथ साझा करें'
+              : 'Have beautiful moments from our events? Share them with our community'
+            }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:photos@bhaktisanskriti.org" 
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Email Photos
+              {isClient && language === 'hi' ? 'फोटो ईमेल करें' : 'Email Photos'}
             </a>
             <a 
               href="https://wa.me/917017075603" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               target="_blank" rel="noopener noreferrer"
             >
-              WhatsApp Share
+              {isClient && language === 'hi' ? 'व्हाट्सऐप शेयर करें' : 'WhatsApp Share'}
             </a>
           </div>
         </div>

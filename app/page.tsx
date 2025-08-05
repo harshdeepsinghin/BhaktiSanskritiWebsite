@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,11 @@ import { Heart, Users, Calendar, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const { t, language } = useLanguage();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const serviceDescriptions = {
     cultural: {
@@ -31,13 +36,12 @@ export default function Home() {
       {/* Responsive Image */}
       <div className="w-full">
         <Image
-          src="/home.jpeg"
+          src="/home.webp"
           alt="Sacred Home"
           width={1920}
           height={1080}
           className="w-full h-auto object-cover"
           priority
-          quality={90}
         />
       </div>
 
@@ -84,8 +88,8 @@ export default function Home() {
               <CardContent className="pt-6">
                 <Heart className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 font-sanskrit">{t('services.cultural')}</h3>
-                <p className="text-muted-foreground" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-                  {serviceDescriptions.cultural[language]}
+                <p className="text-muted-foreground" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+                  {isClient ? serviceDescriptions.cultural[language] : serviceDescriptions.cultural.en}
                 </p>
               </CardContent>
             </Card>
@@ -94,8 +98,8 @@ export default function Home() {
               <CardContent className="pt-6">
                 <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 font-sanskrit">{t('services.education')}</h3>
-                <p className="text-muted-foreground" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-                  {serviceDescriptions.education[language]}
+                <p className="text-muted-foreground" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+                  {isClient ? serviceDescriptions.education[language] : serviceDescriptions.education.en}
                 </p>
               </CardContent>
             </Card>
@@ -104,8 +108,8 @@ export default function Home() {
               <CardContent className="pt-6">
                 <Calendar className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 font-sanskrit">{t('services.festivals')}</h3>
-                <p className="text-muted-foreground" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-                  {serviceDescriptions.festivals[language]}
+                <p className="text-muted-foreground" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+                  {isClient ? serviceDescriptions.festivals[language] : serviceDescriptions.festivals.en}
                 </p>
               </CardContent>
             </Card>
@@ -119,12 +123,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6 font-sanskrit">
-                {t('shivpoojan.title')}
+                {t('products.title')}
               </h2>
               <p className="text-muted-foreground mb-6 text-lg">
-                {t('shivpoojan.description')}
+                {t('products.description')}
               </p>
-              <Link href="/shivpoojan">
+              <Link href="/products">
                 <Button variant="default" size="lg">
                   Learn More
                 </Button>

@@ -16,7 +16,7 @@ A spiritual organization website built with Next.js, dedicated to preserving and
 - **Home**: Hero section with services overview
 - **About**: Mission, vision, and organizational values
 - **Services**: Spiritual services and cultural programs
-- **Shivpoojan**: Sacred worship kits and ritual items
+- **Products**: Sacred worship kits and ritual items
 - **Gallery**: Photo and video galleries of events
 - **Contact**: Contact information with embedded map
 
@@ -73,7 +73,7 @@ npm run start
 │   ├── page.tsx          # Home page
 │   ├── about/            # About page
 │   ├── services/         # Services page
-│   ├── shivpoojan/       # Shivpoojan page
+│   ├── products/        # Products page
 │   ├── gallery/          # Gallery page
 │   ├── contact/          # Contact page
 │   └── not-found.tsx     # 404 page

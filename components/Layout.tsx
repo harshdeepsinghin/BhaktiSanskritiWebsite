@@ -19,7 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: t('nav.home'), href: '/', key: 'home' },
     { name: t('nav.about'), href: '/about', key: 'about' },
     { name: t('nav.services'), href: '/services', key: 'services' },
-    { name: t('nav.shivpoojan'), href: '/shivpoojan', key: 'shivpoojan' },
+    { name: t('nav.products'), href: '/products', key: 'products' },
     { name: t('nav.gallery'), href: '/gallery', key: 'gallery' },
     { name: t('nav.contact'), href: '/contact', key: 'contact' },
   ];
@@ -230,7 +230,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   {language === 'hi' ? 'आध्यात्मिक परामर्श' : 'Spiritual Guidance'}
                 </p>
                 <p className="hover:opacity-100 transition-opacity">
-                  {language === 'hi' ? 'शिवपूजन किट' : 'Shivpoojan Kit'}
+                  {language === 'hi' ? 'उत्पाद' : 'Products'}
                 </p>
                 <p className="hover:opacity-100 transition-opacity">
                   {language === 'hi' ? 'धार्मिक शिक्षा' : 'Religious Education'}
