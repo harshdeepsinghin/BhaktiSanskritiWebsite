@@ -176,36 +176,6 @@ export default function Gallery() {
           </div>
         )}
       </section>
-
-      {/* Featured Content */}
-      <section className="bg-gradient-spiritual text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 font-sanskrit">
-            {isClient && language === 'hi' ? 'अपने पल साझा करें' : 'Share Your Moments'}
-          </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-            {isClient && language === 'hi' 
-              ? 'हमारे कार्यक्रमों के सुंदर पल हैं? उन्हें हमारे समुदाय के साथ साझा करें'
-              : 'Have beautiful moments from our events? Share them with our community'
-            }
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:contact@bhaktisanskriti.org" 
-              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              {isClient && language === 'hi' ? 'फोटो ईमेल करें' : 'Email Photos'}
-            </a>
-            <a 
-              href="https://wa.me/919650863999" 
-              className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              target="_blank" rel="noopener noreferrer"
-            >
-              {isClient && language === 'hi' ? 'व्हाट्सऐप शेयर करें' : 'WhatsApp Share'}
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

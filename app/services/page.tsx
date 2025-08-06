@@ -173,31 +173,27 @@ export default function Services() {
     <div className="space-y-0">
       {servicesContent[language]}
 
-      {/* Call to Action */}
+      {/* Product Redirect */}
       <section className="bg-gradient-spiritual text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 font-sanskrit">
-            {isClient && language === 'hi' ? 'हमारे समुदाय से जुड़ें' : 'Join Our Community'}
+            {isClient && language === 'hi' ? 'भक्ति वृत्तिका प्राप्त करें' : 'Get Bhakti Vrittika'}
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
             {isClient && language === 'hi' 
-              ? 'हमारे आध्यात्मिक परिवार का हिस्सा बनें और हमारे विभिन्न कार्यक्रमों और सेवाओं में भाग लें'
-              : 'Become part of our spiritual family and participate in our various programs and services'
+              ? 'अपनी आध्यात्मिक यात्रा शुरू करें हमारी संपूर्ण शिव पूजा मार्गदर्शिका के साथ'
+              : 'Begin your spiritual journey with our complete Shiva worship guide'
             }
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a
-              href="mailto:contact@bhaktisanskriti.org"
-              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/products"
+              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              {isClient && language === 'hi' ? 'ईमेल करें' : 'Email Us'}
-            </a>
-            <a
-              href="https://wa.me/919650863999"
-              target="_blank" rel="noopener noreferrer"
-              className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              {isClient && language === 'hi' ? 'व्हाट्सऐप करें' : 'WhatsApp Us'}
+              {isClient && language === 'hi' ? 'उत्पाद देखें' : 'View Products'}
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
