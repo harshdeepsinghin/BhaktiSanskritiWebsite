@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Star } from 'lucide-react';
@@ -19,8 +20,7 @@ export default function Products() {
     t('products.feature1'),
     t('products.feature2'),
     t('products.feature3'),
-    t('products.feature4'),
-    t('products.feature5')
+    t('products.feature4')
   ];
 
   return (
@@ -43,7 +43,16 @@ export default function Products() {
         <div className="max-w-4xl mx-auto">
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader className="text-center pb-6">
-              <div className="text-8xl mb-6">{productInfo.image}</div>
+              <div className="mb-6 flex justify-center">
+                <Image
+                  src="/book-cover.webp"
+                  alt="Bhakti Vrittika Book Cover"
+                  width={150}
+                  height={200}
+                  className="rounded-lg shadow-lg object-cover"
+                  priority
+                />
+              </div>
               <CardTitle className={`text-2xl md:text-3xl mb-4 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
                 {t('products.productName')}
               </CardTitle>
@@ -86,7 +95,7 @@ export default function Products() {
                 <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-xl">
                   <div className="text-center">
                     <h3 className={`text-2xl font-bold mb-4 ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
-                      🛒 {language === 'hi' ? 'आदेश देने के तरीके' : 'Order Methods'}
+                      🛒 {language === 'hi' ? 'ऑर्डर करने के तरीके' : 'Order Methods'}
                     </h3>
                     <p className={`mb-8 opacity-90 text-lg ${language === 'hi' ? 'font-sanskrit' : 'font-english'}`}>
                       {language === 'hi'

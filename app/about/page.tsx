@@ -108,8 +108,34 @@ export default function About() {
   };
 
   return (
-    <div className="space-y-16 py-8">
+    <div className="space-y-0">
       {aboutContent[language]}
+
+      {/* Product Redirect */}
+      <section className="bg-gradient-spiritual text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6 font-sanskrit">
+            {language === 'hi' ? 'भक्ति वृत्तिका प्राप्त करें' : 'Get Bhakti Vrittika'}
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
+            {language === 'hi' 
+              ? 'अपनी आध्यात्मिक यात्रा शुरू करें हमारी संपूर्ण शिव पूजा मार्गदर्शिका के साथ'
+              : 'Begin your spiritual journey with our complete Shiva worship guide'
+            }
+          </p>
+          <div className="flex justify-center">
+            <a
+              href="/products"
+              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            >
+              {language === 'hi' ? 'उत्पाद देखें' : 'View Products'}
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

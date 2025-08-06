@@ -120,20 +120,18 @@ export default function Home() {
       {/* Featured Content */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-6 font-sanskrit">
-                {t('products.title')}
-              </h2>
-              <p className="text-muted-foreground mb-6 text-lg">
-                {t('products.description')}
-              </p>
-              <Link href="/products">
-                <Button variant="default" size="lg">
-                  Learn More
-                </Button>
-              </Link>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-primary mb-6 font-sanskrit">
+              {t('products.title')}
+            </h2>
+            <p className="text-muted-foreground mb-6 text-lg max-w-2xl mx-auto">
+              {t('products.description')}
+            </p>
+            <Link href="/products">
+              <Button variant="default" size="lg">
+                {isClient && language === 'hi' ? 'और जानें' : 'Learn More'}
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

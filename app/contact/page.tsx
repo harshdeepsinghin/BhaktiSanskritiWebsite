@@ -41,7 +41,7 @@ export default function Contact() {
         hi: 'ईमेल भेजें',
         en: 'Send Email'
       },
-      link: 'mailto:contact@bhaktisanskriti.org',
+      link: 'mailto:support@bhaktisanskriti.org',
       color: 'bg-muted-foreground'
     }
   ];
@@ -135,30 +135,18 @@ export default function Contact() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-3">General Inquiries</h3>
-                  <div className="space-y-2">
-                    <a href="mailto:contact@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                      <Mail className="w-4 h-4 mr-3" />
-                      contact@bhaktisanskriti.org
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold mb-3">Program Coordination</h3>
-                  <div className="space-y-2">
-                    <a href="mailto:contact@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                      <Mail className="w-4 h-4 mr-3" />
-                      contact@bhaktisanskriti.org
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold mb-3">Emergency Contact</h3>
+                  <h3 className="font-semibold mb-3">Contact Number</h3>
                   <a href="https://wa.me/919650863999" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-3" />
                     WhatsApp: +91 96508 63999
+                  </a>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold mb-3">E-Mail ID</h3>
+                  <a href="mailto:support@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                    <Mail className="w-4 h-4 mr-3" />
+                    support@bhaktisanskriti.org
                   </a>
                 </div>
               </div>
@@ -185,37 +173,6 @@ export default function Contact() {
         </Card>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-gradient-spiritual text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 font-sanskrit">
-            {isClient && language === 'hi' ? 'हमारे आध्यात्मिक समुदाय से जुड़ें' : 'Join Our Spiritual Community'}
-          </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto" style={{ fontFamily: isClient && language === 'hi' ? 'Noto Sans Devanagari, serif' : 'inherit' }}>
-            {isClient && language === 'hi' 
-              ? 'आज ही हमसे जुड़ें और हमारे बढ़ते आध्यात्मिक परिवार का हिस्सा बनें'
-              : 'Connect with us today and become part of our growing spiritual family'
-            }
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://wa.me/919650863999" 
-              target="_blank" rel="noopener noreferrer"
-              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              {isClient && language === 'hi' ? 'व्हाट्सऐप ग्रुप में शामिल हों' : 'Join WhatsApp Group'}
-            </a>
-            <a 
-              href="mailto:contact@bhaktisanskriti.org" 
-              className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              {isClient && language === 'hi' ? 'ईमेल करें' : 'Email Us'}
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

@@ -51,7 +51,6 @@ const translations = {
     'products.feature2': 'Complete Shiva Worship Process',
     'products.feature3': 'Simple and Clear Instructions',
     'products.feature4': 'Mantra-Based Worship Method',
-    'products.feature5': 'Traditional Worship System',
     
     // Gallery Page
     'gallery.title': 'Gallery',
@@ -104,14 +103,13 @@ const translations = {
     'products.fullName': 'वैदिक व शास्त्र सम्मत सम्पूर्ण शिव पूजा सरल विधि व मन्त्रयुक्त',
     'products.serviceAmount': 'सेवा राशि',
     'products.features': 'विशेषताएं',
-    'products.contactOrder': 'आदेश देने के लिए संपर्क करें',
+    'products.contactOrder': 'ऑर्डर करने के लिए संपर्क करें',
     'products.orderText': 'केवल ₹411/- में प्राप्त करें यह अनमोल मार्गदर्शिका',
     'products.orderNow': 'अभी ऑर्डर करें',
     'products.feature1': 'वैदिक व शास्त्र सम्मत विधि',
     'products.feature2': 'सम्पूर्ण शिव पूजा प्रक्रिया',
     'products.feature3': 'सरल और स्पष्ट निर्देश',
     'products.feature4': 'मन्त्रयुक्त पूजा विधि',
-    'products.feature5': 'वैदिक एवं शास्त्र सम्मत पद्धति',
     
     // Gallery Page
     'gallery.title': 'गैलरी',
