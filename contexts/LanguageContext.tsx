@@ -64,6 +64,12 @@ const translations = {
     'contact.whatsapp': 'WhatsApp',
     'contact.call': 'Call Us',
     'contact.email': 'Email Us',
+    'contact.visitCenter': 'Visit Our Center',
+    'contact.address': 'Address',
+    'contact.officeHours': 'Office Hours',
+    'contact.getInTouch': 'Get in Touch',
+    'contact.contactNumber': 'Contact Number',
+    'contact.emailId': 'E-Mail ID',
     
     // Footer 
     'footer.copyright': '© 2025 Bhakti Sanskriti. All rights reserved.',
@@ -123,6 +129,12 @@ const translations = {
     'contact.whatsapp': 'व्हाट्सऐप',
     'contact.call': 'कॉल करें',
     'contact.email': 'ईमेल करें',
+    'contact.visitCenter': 'हमारे केंद्र पर आएं',
+    'contact.address': 'पता',
+    'contact.officeHours': 'कार्यालय समय',
+    'contact.getInTouch': 'संपर्क करें',
+    'contact.contactNumber': 'संपर्क नंबर',
+    'contact.emailId': 'ई-मेल आईडी',
     
     // Footer
     'footer.copyright': '© 2025 भक्ति संस्कृति। सभी अधिकार सुरक्षित।',

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Phone, Mail, MessageCircle, MapPin, Clock, Users } from 'lucide-react';
+import { Mail, MessageCircle, MapPin, Clock, Users } from 'lucide-react';
 
 export default function Contact() {
   const { t, language } = useLanguage();
@@ -94,24 +94,33 @@ export default function Contact() {
           {/* Office Information */}
           <Card className="p-6">
             <CardContent className="pt-6">
-              <h2 className="text-2xl font-bold text-primary mb-6 flex items-center">
+              <h2 className="text-2xl font-bold text-secondary-foreground mb-6 flex items-center">
                 <MapPin className="w-6 h-6 mr-3" />
-                Visit Our Center
+                {t('contact.visitCenter')}
               </h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-1">Address</h3>
-                  <p className="text-muted-foreground">
-                    Clock Tower<br />
-                    Dehradun<br />
-                    Uttarakhand - 248001<br />
-                    India
-                  </p>
+                  <h3 className="font-semibold mb-1">{t('contact.address')}</h3>
+                 {language === 'hi' ? (
+                        <>
+                          <p className="text-muted-foreground">देवभूमि भारत संस्थान</p>
+                          <p className="text-muted-foreground">कार्यालय पता - खसरा नंबर 145,</p>
+                          <p className="text-muted-foreground">साहकोला पांडे गांव,</p>
+                          <p className="text-muted-foreground">भीमताल (नैनीताल)</p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="text-muted-foreground">Devbhoomi Bharat Sansthan</p>
+                          <p className="text-muted-foreground">Office Address - Khasra No. 145,</p>
+                          <p className="text-muted-foreground">Sahkola Pande Village,</p>
+                          <p className="text-muted-foreground">Bhimtal (Nainital)</p>
+                        </>
+                      )}
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2 flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
-                    Office Hours
+                    {t('contact.officeHours')}
                   </h3>
                   <div className="space-y-1">
                     {officeHours.map((schedule, idx) => (
@@ -129,13 +138,13 @@ export default function Contact() {
           {/* Quick Contact */}
           <Card className="p-6">
             <CardContent className="pt-6">
-              <h2 className="text-2xl font-bold text-primary mb-6 flex items-center">
+              <h2 className="text-2xl font-bold text-secondary-foreground mb-6 flex items-center">
                 <Users className="w-6 h-6 mr-3" />
-                Get in Touch
+                {t('contact.getInTouch')}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-3">Contact Number</h3>
+                  <h3 className="font-semibold mb-3">{t('contact.contactNumber')}</h3>
                   <a href="https://wa.me/919650863999" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-3" />
                     WhatsApp: +91 96508 63999
@@ -143,7 +152,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <h3 className="font-semibold mb-3">E-Mail ID</h3>
+                  <h3 className="font-semibold mb-3">{t('contact.emailId')}</h3>
                   <a href="mailto:support@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                     <Mail className="w-4 h-4 mr-3" />
                     support@bhaktisanskriti.org
@@ -155,23 +164,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="container mx-auto px-4">
-        <Card className="overflow-hidden">
-          <div className="aspect-video bg-muted flex items-center justify-center">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.74114435665!2d78.03923607556455!3d30.324295074783848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929ea85275763%3A0xdc5852f79736305f!2sClock%20Tower!5e1!3m2!1sen!2sin!4v1753788488082!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Location Map"
-            ></iframe>
-          </div>
-        </Card>
-      </section>
+
 
     </div>
   );
