@@ -26,23 +26,10 @@ export default function Contact() {
         hi: 'संदेश भेजें',
         en: 'Send Message'
       },
-      link: 'https://wa.me/917017075603',
+      link: 'https://wa.me/919650863999',
       color: 'bg-muted-foreground'
     },
-    {
-      icon: <Phone className="w-8 h-8 text-blue-500" />,
-      title: t('contact.call'),
-      description: {
-        hi: 'सीधी फोन परामर्श',
-        en: 'Direct phone consultation'
-      },
-      action: {
-        hi: 'अभी कॉल करें',
-        en: 'Call Now'
-      },
-      link: 'tel:+917017075603',
-      color: 'bg-muted-foreground'
-    },
+
     {
       icon: <Mail className="w-8 h-8 text-purple-500" />,
       title: t('contact.email'),
@@ -54,7 +41,7 @@ export default function Contact() {
         hi: 'ईमेल भेजें',
         en: 'Send Email'
       },
-      link: 'mailto:info@bhaktisanskriti.org',
+      link: 'mailto:contact@bhaktisanskriti.org',
       color: 'bg-muted-foreground'
     }
   ];
@@ -150,13 +137,9 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold mb-3">General Inquiries</h3>
                   <div className="space-y-2">
-                    <a href="tel:+917017075603" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                      <Phone className="w-4 h-4 mr-3" />
-                      +91 XXXXX XXXXX
-                    </a>
-                    <a href="mailto:info@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                    <a href="mailto:contact@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                       <Mail className="w-4 h-4 mr-3" />
-                      info@bhaktisanskriti.org
+                      contact@bhaktisanskriti.org
                     </a>
                   </div>
                 </div>
@@ -164,22 +147,18 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold mb-3">Program Coordination</h3>
                   <div className="space-y-2">
-                    <a href="tel:+917017075603" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
-                      <Phone className="w-4 h-4 mr-3" />
-                      +91 XXXXX XXXXX
-                    </a>
-                    <a href="mailto:programs@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                    <a href="mailto:contact@bhaktisanskriti.org" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                       <Mail className="w-4 h-4 mr-3" />
-                      programs@bhaktisanskriti.org
+                      contact@bhaktisanskriti.org
                     </a>
                   </div>
                 </div>
 
                 <div>
                   <h3 className="font-semibold mb-3">Emergency Contact</h3>
-                  <a href="https://wa.me/917017075603" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919650863999" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-3" />
-                    WhatsApp: +91 XXXXX XXXXX
+                    WhatsApp: +91 96508 63999
                   </a>
                 </div>
               </div>
@@ -220,7 +199,7 @@ export default function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://wa.me/917017075603" 
+              href="https://wa.me/919650863999" 
               target="_blank" rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
@@ -228,11 +207,11 @@ export default function Contact() {
               {isClient && language === 'hi' ? 'व्हाट्सऐप ग्रुप में शामिल हों' : 'Join WhatsApp Group'}
             </a>
             <a 
-              href="tel:+91xxxxxxxxxx" 
+              href="mailto:contact@bhaktisanskriti.org" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              {isClient && language === 'hi' ? 'मुलाकात का समय तय करें' : 'Schedule Visit'}
+              <Mail className="w-5 h-5 mr-2" />
+              {isClient && language === 'hi' ? 'ईमेल करें' : 'Email Us'}
             </a>
           </div>
         </div>

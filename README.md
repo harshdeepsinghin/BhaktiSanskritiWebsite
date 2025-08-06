@@ -111,9 +111,8 @@ Language switching is handled by `LanguageContext.tsx` with translations for:
 ## 📞 Contact Information
 
 - **Location**: Clock Tower, Dehradun, Uttarakhand - 248001, India
-- **Phone**: +91 7017075603
-- **Email**: info@bhaktisanskriti.org
-- **WhatsApp**: Available for quick responses
+- **Email**: contact@bhaktisanskriti.org
+- **WhatsApp**: +91 96508 63999 (Available for quick responses)
 
 ## 🤝 Contributing
 

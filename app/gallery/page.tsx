@@ -191,13 +191,13 @@ export default function Gallery() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:photos@bhaktisanskriti.org" 
+              href="mailto:contact@bhaktisanskriti.org" 
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               {isClient && language === 'hi' ? 'फोटो ईमेल करें' : 'Email Photos'}
             </a>
             <a 
-              href="https://wa.me/917017075603" 
+              href="https://wa.me/919650863999" 
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
               target="_blank" rel="noopener noreferrer"
             >

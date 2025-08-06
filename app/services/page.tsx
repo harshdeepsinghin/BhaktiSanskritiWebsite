@@ -187,13 +187,13 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+917017075603"
+              href="mailto:contact@bhaktisanskriti.org"
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              {isClient && language === 'hi' ? 'अभी कॉल करें' : 'Call Us Now'}
+              {isClient && language === 'hi' ? 'ईमेल करें' : 'Email Us'}
             </a>
             <a
-              href="https://wa.me/917017075603"
+              href="https://wa.me/919650863999"
               target="_blank" rel="noopener noreferrer"
               className="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
