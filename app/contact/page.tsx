@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, MessageCircle, MapPin, Clock, Users } from 'lucide-react';
+import { Mail, MessageCircle, MapPin, Users } from 'lucide-react';
 
 export default function Contact() {
   const { t, language } = useLanguage();
@@ -46,11 +46,7 @@ export default function Contact() {
     }
   ];
 
-  const officeHours = [
-    { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM' },
-    { day: 'Saturday', time: '10:00 AM - 4:00 PM' },
-    { day: 'Sunday', time: 'By Appointment' }
-  ];
+
 
   return (
     <div className="space-y-16 py-8">
@@ -101,36 +97,23 @@ export default function Contact() {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold mb-1">{t('contact.address')}</h3>
-                 {language === 'hi' ? (
-                        <>
-                          <p className="text-muted-foreground">देवभूमि भारत संस्थान</p>
-                          <p className="text-muted-foreground">कार्यालय पता - खसरा नंबर 145,</p>
-                          <p className="text-muted-foreground">साहकोला पांडे गांव,</p>
-                          <p className="text-muted-foreground">भीमताल (नैनीताल)</p>
-                        </>
-                      ) : (
-                        <>
-                          <p className="text-muted-foreground">Devbhoomi Bharat Sansthan</p>
-                          <p className="text-muted-foreground">Office Address - Khasra No. 145,</p>
-                          <p className="text-muted-foreground">Sahkola Pande Village,</p>
-                          <p className="text-muted-foreground">Bhimtal (Nainital)</p>
-                        </>
-                      )}
+                  {language === 'hi' ? (
+                    <>
+                      <p className="text-muted-foreground">देवभूमि भारत संस्थान</p>
+                      <p className="text-muted-foreground">कार्यालय पता - खसरा नंबर 145,</p>
+                      <p className="text-muted-foreground">साहकोला पांडे गांव,</p>
+                      <p className="text-muted-foreground">भीमताल (नैनीताल)</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-muted-foreground">Devbhoomi Bharat Sansthan</p>
+                      <p className="text-muted-foreground">Office Address - Khasra No. 145,</p>
+                      <p className="text-muted-foreground">Sahkola Pande Village,</p>
+                      <p className="text-muted-foreground">Bhimtal (Nainital)</p>
+                    </>
+                  )}
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-2 flex items-center">
-                    <Clock className="w-4 h-4 mr-2" />
-                    {t('contact.officeHours')}
-                  </h3>
-                  <div className="space-y-1">
-                    {officeHours.map((schedule, idx) => (
-                      <div key={idx} className="flex justify-between text-sm">
-                        <span className="text-muted-foreground">{schedule.day}</span>
-                        <span className="font-medium">{schedule.time}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+
               </div>
             </CardContent>
           </Card>
