@@ -65,7 +65,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 # Optional
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_EMAIL=support@bhaktisanskriti.org
-NEXT_PUBLIC_WHATSAPP=919650863999
+NEXT_PUBLIC_WHATSAPP=919205282333
 ```
 
 ## 🌐 Domain Configuration

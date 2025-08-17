@@ -120,7 +120,7 @@ export default function Products() {
 
                       {/* WhatsApp Chat */}
                       <a
-                        href="https://wa.me/919650863999?text=Hi,%20I%20want%20to%20order%20Bhakti%20Vrittika%20for%20₹411"
+                        href="https://wa.me/919205282333?text=Hi,%20I%20want%20to%20order%20Bhakti%20Vrittika%20for%20₹411"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-green-500 text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-green-600 transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center"
@@ -174,7 +174,7 @@ export default function Products() {
                 {language === 'hi' ? 'ORDER NOW' : 'ORDER NOW'}
               </a>
               <a
-                href="https://wa.me/919650863999?text=Hi,%20I%20want%20to%20order%20Bhakti%20Vrittika%20for%20₹411"
+                href="https://wa.me/919205282333?text=Hi,%20I%20want%20to%20order%20Bhakti%20Vrittika%20for%20₹411"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition-opacity inline-flex items-center justify-center"

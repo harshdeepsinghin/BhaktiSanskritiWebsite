@@ -26,7 +26,7 @@ export default function Contact() {
         hi: 'संदेश भेजें',
         en: 'Send Message'
       },
-      link: 'https://wa.me/919650863999',
+      link: 'https://wa.me/919205282333',
       color: 'bg-muted-foreground'
     },
 
@@ -128,9 +128,9 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h3 className="font-semibold mb-3">{t('contact.contactNumber')}</h3>
-                  <a href="https://wa.me/919650863999" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919205282333" className="flex items-center text-muted-foreground hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-3" />
-                    WhatsApp: +91 96508 63999
+                    WhatsApp: +91 92052 82333
                   </a>
                 </div>
 
